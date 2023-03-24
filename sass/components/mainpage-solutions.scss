@@ -1,0 +1,82 @@
+.solutions--icon-list {
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 450px;
+  @include md {
+    max-width: 738px;
+  }
+  @include lg {
+    max-width: 1170px;
+  }
+}
+
+.solutions--icon-background {
+  border-radius: 4px;
+  background-color: $solutionsBackground;
+  width: 450px;
+  height: 120px;
+  display: grid;
+  @include md {
+    width: 354px;
+    display: grid;
+  }
+  @include lg {
+    width: 270px;
+    display: inline-block;
+  }
+}
+
+.solutions--icon-svg {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.solutions--list {
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 450px;
+  @include md {
+    max-width: 738px;
+  }
+  @include lg {
+    max-width: 1170px;
+  }
+}
+
+.solutions--item {
+  align-items: center;
+  width: 450px;
+  height: auto;
+  display: grid;
+  @include md {
+    width: 354px;
+    display: grid;
+  }
+  @include lg {
+    width: 270px;
+    display: inline-block;
+  }
+}
+
+.solutions--item-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $textColorPrimary;
+}
+
+.solutions--item-text {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: $textColorSecondary;
+}

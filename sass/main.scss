@@ -1,0 +1,39 @@
+@import "utils/variables.scss";
+@import "utils/mixins.scss";
+
+.body {
+  background-color: $backgroundPrimaryColor;
+  font-family: $primaryFontFamily;
+}
+
+.container {
+  max-width: 320px;
+  margin: auto;
+  @include sm {
+    max-width: 480px;
+  }
+  @include md {
+    max-width: 786px;
+  }
+  @include lg {
+    max-width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  @include lg {
+    padding-top: 94px;
+  }
+}
+
+@import "components/navbar";
+@import "components/mainpage-header";
+@import "components/mainpage-solutions";
+@import "components/mainpage-whatwedo";
+@import "components/mainpage-team";
+@import "components/mainpage-clients";
+@import "components/mainpage-modal";
+@import "components/portfolio-categories";
+@import "components/portfolio-projects";
+@import "components/footer";

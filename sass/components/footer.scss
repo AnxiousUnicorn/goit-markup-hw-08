@@ -1,0 +1,174 @@
+.footer {
+  background-color: $backgroundFooterColor;
+  height: 252px;
+  display: flex;
+  padding-top: 0;
+}
+
+.footer--section {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer--name-first {
+  color: $companyColor;
+  font-family: $secondaryFontFamily;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.938;
+  text-decoration: none;
+}
+
+.footer--name-second {
+  color: $textColorWhite;
+  font-family: $secondaryFontFamily;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.938;
+  text-decoration: none;
+}
+
+.footer--address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: $textColorWhite;
+  display: block;
+}
+
+.footer--contact {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+  &:hover {
+    color: $companyColor;
+    cursor: pointer;
+  }
+  &:focus {
+    color: $companyColor;
+  }
+}
+
+.footer--joinus {
+  display: block;
+  width: 206px;
+}
+
+.joinus--title {
+  color: $textColorWhite;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.joinus--list {
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 206px;
+  padding-left: 0;
+}
+
+.joinus--icon {
+  fill: white;
+  &:hover .joinus--icon-bg {
+    cursor: pointer;
+    background-color: $companyColor;
+  }
+}
+
+.joinus--icon-bg {
+  border-radius: 50px;
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
+.joinus--icon-svg {
+  margin: 12px 12px 12px 12px;
+}
+
+.footer--newsletter {
+  display: block;
+  width: 570px;
+}
+
+.newsletter--title {
+  display: block;
+  color: $textColorWhite;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.newsletter--form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.newsletter--input-rect {
+  display: block;
+  width: 358px;
+  height: 50px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.newsletter--input-field {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  margin-left: 16px;
+  margin-top: 14px;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter--button {
+  width: 200px;
+  height: 50px;
+  display: inline-flex;
+  background-color: $companyColor;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  align-items: center;
+  justify-content: space-around;
+  letter-spacing: 0.06em;
+  color: $textColorWhite;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}

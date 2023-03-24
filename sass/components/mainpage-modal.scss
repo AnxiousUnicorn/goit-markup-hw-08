@@ -1,0 +1,229 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: $backgroundPrimaryColor;
+  display: block;
+  padding: 40px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal--button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: $backgroundPrimaryColor;
+  border: 1px;
+  border-radius: 50%;
+  border-color: var(--border-color);
+  cursor: pointer;
+}
+
+.modal--is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal--title {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.438;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $textColorPrimary;
+  margin-bottom: 12px;
+}
+
+.modal--form {
+  height: 342px;
+  width: 448px;
+  align-content: space-around;
+  display: block;
+  justify-content: flex-start;
+}
+
+.modal--form-label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  &:focus-within {
+    fill: $companyColor;
+  }
+  &:focus-within .modal--input-rect {
+    border-color: $companyColor;
+  }
+  &:focus-within .modal--form-message-rect {
+    border-color: $companyColor;
+  }
+}
+
+.modal--form-labelname {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 0.875;
+  letter-spacing: 0.01em;
+  color: $textColorSecondary;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal--input-rect {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40px;
+  width: 448px;
+  border-radius: 4px;
+  border-width: 1px;
+  border: solid;
+  border-color: rgba(33, 33, 33, 0.2);
+  transition-property: fill border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
+.modal--input-icon-svg {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.modal--input-field {
+  border: none;
+  width: 390px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal--form-message-rect {
+  display: inline-flex;
+  width: 448px;
+  height: 120px;
+  border-radius: 4px;
+  border-width: 1px;
+  border: solid;
+  border-color: rgba(33, 33, 33, 0.2);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
+.modal--form-message-field {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.438;
+  letter-spacing: 0.01em;
+  width: 420px;
+  height: 90px;
+  margin-left: 12px;
+  margin-top: 12px;
+  resize: none;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal--form-policy {
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
+  width: 448px;
+}
+
+.modal--policy-checkbox {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  height: 16px;
+  width: 16px;
+}
+
+.modal--policy-label::before {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border-width: 1px;
+  border: solid;
+  border-color: black;
+  border-radius: 2px;
+  margin-right: -20px;
+}
+
+.modal--policy-icon {
+  position: relative;
+  width: 16px;
+  height: 15px;
+  margin-bottom: 0.5px;
+}
+
+.modal--policy-checkbox:checked ~ .modal--policy-icon {
+  background-color: $companyColor;
+  visibility: visible;
+}
+
+.modal--policy-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: $textColorSecondary;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: inline;
+  position: relative;
+}
+
+.modal--policy-link:visited {
+  color: $companyColor;
+}
+
+.modal--button-send {
+  height: 50px;
+  width: 200px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+  background-color: $companyColor;
+  color: $textColorWhite;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: block;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}

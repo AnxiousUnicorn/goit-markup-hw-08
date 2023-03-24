@@ -1,0 +1,51 @@
+.whatwedo-section {
+  visibility: hidden;
+  position: absolute;
+  @include lg {
+    visibility: visible;
+    position: relative;
+  }
+}
+
+.whatwedo--title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 2.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $textColorPrimary;
+}
+
+.whatwedo--list {
+  list-style: none;
+  width: 1170px;
+  height: 294px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.whatwedo--image {
+  position: relative;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.whatwedo--image-label {
+  position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $textColorWhite;
+}

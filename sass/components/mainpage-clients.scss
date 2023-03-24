@@ -1,0 +1,65 @@
+.clients--title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 2.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $textColorPrimary;
+  display: block;
+  @include lg {
+    font-size: 36px;
+  }
+}
+
+.clients--list {
+  list-style: none;
+  display: flex;
+  max-width: 450px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include md {
+    max-width: 738px;
+  }
+  @include lg {
+    max-width: 1170px;
+    flex-wrap: nowrap;
+  }
+}
+
+.clients--list-item {
+  border-color: $iconColor;
+  border-width: 1px;
+  border-radius: 4px;
+  border-style: solid;
+  height: 92px;
+  width: 210px;
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  fill: $iconColor;
+  transition-property: fill border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+  @include md {
+    height: 92px;
+    width: 226px;
+    display: grid;
+    gap: 30px;
+  }
+  @include lg {
+    height: 92px;
+    width: 170px;
+    display: inline-flex;
+  }
+  &:hover {
+    cursor: pointer;
+    fill: $companyColor;
+    border-color: $companyColor;
+  }
+  &:hover .clients--logo {
+    cursor: pointer;
+    fill: $companyColor;
+  }
+}
